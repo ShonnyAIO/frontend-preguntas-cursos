@@ -14,7 +14,7 @@ export class EstudiantesGuard implements CanActivate {
     if(localStorage.getItem('session')){
       return true;
     }
-    this.router.navigate(['/inicio']);
+    this.router.navigate(['/']);
     return false;
   }
   

@@ -7,7 +7,7 @@ import { EstudiantesGuard } from './guard/estudiantes.guard';
 
 const routes: Routes = [
   {
-    path : 'inicio',
+    path : '',
     component: HomeComponent,
     canActivate: [LoginGuard]
   },
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo : 'inicio'
+    redirectTo : ''
   }
 ];
 
