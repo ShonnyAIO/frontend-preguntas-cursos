@@ -1,0 +1,127 @@
+<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen-min lg:py-0">
+    <div *ngIf="id == 0"
+        class="w-full max-w-lg p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl dark:text-white">
+            Sección de preguntas
+        </h5>
+        <p class="text-sm font-normal text-gray-500 dark:text-gray-400">
+            Seleccione el tema que vayas a responder
+        </p>
+        <ul class="my-4 space-y-3">
+            <li (click)="goToTest(1)">
+                <a href="javaScript:void(0);"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book-2" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z" />
+                        <path d="M19 16h-12a2 2 0 0 0 -2 2" />
+                        <path d="M9 8h6" />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Clase #1 - Conceptos</span>
+                </a>
+            </li>
+            <li (click)="goToTest(2)">
+                <a href="javaScript:void(0);"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bomb" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M15.349 5.349l3.301 3.301a1.2 1.2 0 0 1 0 1.698l-.972 .972a7.5 7.5 0 1 1 -5 -5l.972 -.972a1.2 1.2 0 0 1 1.698 0z" />
+                        <path d="M17 7l1.293 -1.293a2.414 2.414 0 0 0 .707 -1.707a1 1 0 0 1 1 -1h1" />
+                        <path d="M7 13a3 3 0 0 1 3 -3" />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Clase #2 - Bombas</span>
+                </a>
+            </li>
+            <li (click)="goToTest(3)">
+                <a href="javaScript:void(0);"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-measure"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M19.875 12c.621 0 1.125 .512 1.125 1.143v5.714c0 .631 -.504 1.143 -1.125 1.143h-15.875a1 1 0 0 1 -1 -1v-5.857c0 -.631 .504 -1.143 1.125 -1.143h15.75z" />
+                        <path d="M9 12v2" />
+                        <path d="M6 12v3" />
+                        <path d="M12 12v3" />
+                        <path d="M18 12v3" />
+                        <path d="M15 12v2" />
+                        <path d="M3 3v4" />
+                        <path d="M3 5h18" />
+                        <path d="M21 3v4" />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Clase #3 - Medidores</span>
+                </a>
+            </li>
+            <li (click)="goToTest(4)">
+                <a href="javaScript:void(0);"
+                    class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-laptop"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 19l18 0" />
+                        <path d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Clase #4 - Sistemas</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <ng-container *ngIf="!isQuizCompleted && id != 0">
+        <div class="flex flex-row justify-content-around py-3">
+            <div class="ml-2">
+                <h5>Puntaje: {{points}}</h5>
+            </div>
+            <div class="ml-2">
+                <span style="font-style: italic;">Pregunta {{currentQuestion + 1 }} de {{questionList.length}}</span>
+            </div>
+            <div class="ml-2">
+                <h5>{{counter}} segundos ⏱</h5>
+            </div>
+        </div>
+
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div class="bg-blue-600 h-2.5 rounded-full" [ngStyle]="{'width':progress+'%'}"></div>
+        </div>
+
+        <div class="mt-2">
+            <h3 class="text-lg font-bold dark:text-white">{{questionList[currentQuestion]?.preguntas}}</h3>
+        </div>
+
+        <div class="mt-2">
+            <ol *ngFor="let option of questionList[currentQuestion]?.opciones">
+                <li appChangeBg [isCorrect]="option === questionList[currentQuestion]?.respuesta" class="cursor-pointer mt-2 block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700" (click)="answer(currentQuestion + 1, option, questionList[currentQuestion]?.respuesta, questionList[currentQuestion]?._id)">
+                    <div>
+                        {{option}}
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+    </ng-container>
+
+    <ng-container *ngIf="isQuizCompleted">
+        <div class="flex flex-row justify-content-between">
+            <img *ngIf="points >= 60" style="width: 50%;" class="img-fluid col-sm-12 mx-auto"
+                src="https://icon-library.com/images/celebration-icon-png/celebration-icon-png-7.jpg" alt="Festival">
+            <img *ngIf="points < 60" style="width: 50%;" class="img-fluid col-sm-12 mx-auto"
+                src="https://icon-library.com/images/sad-icon/sad-icon-9.jpg" alt="Sad Person">
+            <div class="result text-center col-md-6 col-sm-12">
+                <h3>Haz terminado la prueba!! <br>Sus resultados:</h3>
+                <p>Total Preguntas Atendida(s) : {{questionList.length}} </p>
+                <p>Total Preguntas Correcta(s) : {{correctAnswer}} </p>
+                <p>Total Preguntas Incorrecta(s) : {{inCorrectAnswer}} </p>
+                <p>Su puntaje : {{points}} Puntos </p>
+                <p *ngIf="points >= 60"> Siga asi!! Estas dominando el tema </p>
+                <p *ngIf="points < 60"> Lo sentimos!! Debes repasar nuevamente </p>
+            </div>
+        </div>
+    </ng-container>
+</div>
