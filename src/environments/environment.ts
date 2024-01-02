@@ -1,3 +1,3 @@
 export const environment = {
-    apiURL : 'http://127.0.0.1:5000'
+    apiURL : 'https://backend-preguntas-cursos.jonathantorres6.repl.co'
 };
