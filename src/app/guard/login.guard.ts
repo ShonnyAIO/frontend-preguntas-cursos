@@ -13,9 +13,9 @@ export class LoginGuard implements CanActivate {
 
     if(localStorage.getItem('session')){
       this.router.navigate(['/preguntas']);
-      return true;
+      return false;
     }
-    return false;
+    return true;
   }
   
 }
