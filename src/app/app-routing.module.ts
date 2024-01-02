@@ -19,8 +19,7 @@ const routes: Routes = [
   {
     path: '**',
     redirectTo : 'inicio'
-  },
-  { path: '', pathMatch: 'full', redirectTo: 'inicio' },
+  }
 ];
 
 const config: ExtraOptions = {
